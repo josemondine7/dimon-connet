@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Dimon Connet — Servicios Autónomos</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+
+  <!-- ===== PANTALLA DE PRESENTACIÓN (2.5 seg) ===== -->
+  <div id="splash" class="splash activa">
+    <div class="splash-contenido">
+      <div class="splash-logo">◆</div>
+      <h1>Dimon Connet</h1>
+      <p>Servicios Autónomos</p>
+    </div>
+  </div>
+
+  <!-- ===== PANTALLA PRINCIPAL: FLUJO DESLIZABLE ===== -->
+  <main id="app" class="app oculta">
+
+    <!-- Contenedor de publicaciones -->
+    <div id="feed" class="feed">
+      <!-- Las publicaciones se cargan dinámicamente -->
+    </div>
+
+    <!-- Perfil del AUTOR → arriba a la izquierda -->
+    <div id="perfil-autor" class="perfil-superior oculta">
+      <img id="autor-foto" src="" alt="" />
+      <span id="autor-nombre"></span>
+    </div>
+
+    <!-- Título y ciudad → abajo a la izquierda -->
+    <div class="info-publicacion">
+      <h2 id="pub-titulo"></h2>
+      <p id="pub-ciudad"></p>
+    </div>
+
+    <!-- MI PERFIL → abajo a la derecha -->
+    <button id="mi-perfil" class="mi-perfil" title="Mi perfil">
+      <span id="mi-avatar">👤</span>
+    </button>
+
+    <!-- DIMON → centrado abajo, siempre visible -->
+    <button id="boton-dimon" class="boton-dimon" title="Hablar con Dimon">
+      <span class="dimon-icono">◆</span>
+    </button>
+
+    <!-- Enlaces legales → muy chiquitos, abajo a la derecha (debajo de mi perfil) -->
+    <nav class="enlaces-legales">
+      <a href="/legal/terminos.html" target="_blank">Términos</a> ·
+      <a href="/legal/privacidad.html" target="_blank">Privacidad</a> ·
+      <a href="/legal/pagos.html" target="_blank">Pagos</a>
+    </nav>
+  </main>
+
+  <!-- ===== VENTANA DE CHAT CON DIMON ===== -->
+  <div id="chat-dimon" class="chat-dimon oculta">
+    <div class="chat-cabecera">
+      <span class="chat-titulo">◆ Dimon</span>
+      <button id="cerrar-chat" class="chat-cerrar">✕</button>
+    </div>
+    <div id="chat-mensajes" class="chat-mensajes"></div>
+    <div class="chat-entrada">
+      <input id="chat-input" type="text" placeholder="Escribí tu mensaje..." autocomplete="off" />
+      <button id="chat-enviar" class="chat-enviar">➤</button>
+      <button id="chat-voz" class="chat-voz">🎙️</button>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: INICIAR SESIÓN / REGISTRO ===== -->
+  <div id="modal-auth" class="modal oculta">
+    <div class="modal-contenido">
+      <button class="modal-cerrar" id="auth-cerrar">✕</button>
+      <h3 id="auth-titulo">Crear cuenta</h3>
+      <form id="auth-formulario">
+        <input type="text" id="auth-usuario" placeholder="Nombre de usuario" />
+        <input type="email" id="auth-correo" placeholder="Correo electrónico" required />
+        <input type="password" id="auth-clave" placeholder="Contraseña (mínimo 8 caracteres)" required />
+        <input type="text" id="auth-pais" placeholder="País" />
+        <input type="text" id="auth-departamento" placeholder="Departamento / Estado" />
+        <input type="text" id="auth-ciudad" placeholder="Ciudad" />
+        <p id="auth-error" class="auth-error oculta"></p>
+        <button type="submit" id="auth-boton">Crear cuenta</button>
+      </form>
+      <p class="auth-cambiar">
+        <span id="auth-cambiar-texto">¿Ya tenés cuenta?</span>
+        <a href="#" id="auth-cambiar-boton">Iniciar sesión</a>
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

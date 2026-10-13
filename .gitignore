@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+dist/
+dist-ssr/
+
+# Variables de entorno — NUNCA subir claves reales
+.env
+.env.local
+.env.*.local
+
+# Archivos del sistema
+.DS_Store
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
