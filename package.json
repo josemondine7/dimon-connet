@@ -2,11 +2,11 @@
   "name": "dimon-connet",
   "version": "1.0.0",
   "type": "module",
-  "description": "Plataforma de servicios autónomos — Dimon Connet",
+  "description": "Plataforma de Servicios Autónomos — Dimon Connet",
   "main": "server.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm exec -- vite build",
     "preview": "vite preview",
     "start": "node server.js"
   },
