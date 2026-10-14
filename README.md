@@ -105,4 +105,4 @@ Abrí `http://localhost:5173` en tu navegador.
 
 ## 📄 CORREO DE CONTACTO
 
-dimon.connet@gmail.com *(configurar cuando tengas el dominio)*
+dimon.connet@gmail.com 
